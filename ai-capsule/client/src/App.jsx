@@ -1,3 +1,4 @@
+import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { useAuth } from './AuthContext.jsx';
 import ProtectedRoute from './ProtectedRoute.jsx';

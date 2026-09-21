@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function Login() {
   const handleLogin = () => {
     // Full page redirect (not fetch) — hands control to Express,
