@@ -4,17 +4,18 @@
   "private": true,
   "main": "index.js",
   "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "node --watch index.js",
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "^4.19.2",
-    "better-sqlite3": "^11.3.0",
-    "jsonwebtoken": "^9.0.2",
-    "cookie-parser": "^1.4.6",
-    "dotenv": "^16.4.5",
-    "passport": "^0.7.0",
-    "passport-github2": "^0.1.12"
+    "express": "^5.2.1",
+    "better-sqlite3":"^13.0.3",
+    "jswonwebtoken":"^9.0.2",
+    "cookie-parser":"^1.4.7",
+    "dotenv":"^18.0.2"
   }
 }
