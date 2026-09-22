@@ -27,7 +27,7 @@ router.get('/github', (req, res) => {
         state,
     });
 
-    res.redirect('https://github.com/login/oauth/authorize?${params}');
+    res.redirect(`https://github.com/login/oauth/authorize?${params}`);
 });
 
 // Step 2: GitHub redirects back here with a temporary code.
