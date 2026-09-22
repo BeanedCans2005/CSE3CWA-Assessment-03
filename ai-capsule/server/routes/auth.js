@@ -67,6 +67,7 @@ router.get('/github/callback', async (req, res) => {
             },
         });
         const ghUser = await userRes.json();
+        console.log('GitHub /user response:', ghUser);
 
         // Issue OUR OWN application JWT. This is the token the assignment
         // assesses - NOT GitHub's access token, which we now discard.
