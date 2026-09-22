@@ -55,9 +55,12 @@ router.get('/github/callback', async (req, res) => {
         });
 
         const tokenData = await tokenRes.json();
+        console.log('GitHub token exchange response:', tokenData);
         if (!tokenData.access_token) {
             return res.status(401).send('OAuth token exchange failed');
         }
+
+    
 
         // Use the GitHub token once, to identify the user.
         const userRes = await fetch('https://api.github.com/user', {
