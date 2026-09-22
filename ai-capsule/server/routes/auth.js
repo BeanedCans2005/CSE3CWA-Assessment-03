@@ -65,7 +65,7 @@ router.get('/github/callback', async (req, res) => {
         // Use the GitHub token once, to identify the user.
         const userRes = await fetch('https://api.github.com/user', {
             headers: {
-                Authorization: 'Bearer ${tokenData.access_token}',
+                Authorization: `Bearer ${tokenData.access_token}`,
                 'User-Agent': 'ai-capsule',
             },
         });
@@ -88,7 +88,7 @@ router.get('/github/callback', async (req, res) => {
             maxAge: 2 * 60 * 60 * 1000, 
         });
 
-        res.redirect('./dashboard');
+        res.redirect('/dashboard');
     } catch (err) {
         console.error('OAuth callback error:', err);
         res.status(500).send('Authentication failed');
@@ -110,7 +110,7 @@ router.get('/me', (req, res) => {
 });
 
 router.post('/logout', (req, res) => {
-    res.clearCooker('token');
+    res.clearCookie('token');
     res.json({ success: true });
 });
 
