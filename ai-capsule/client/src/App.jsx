@@ -11,13 +11,14 @@ export default function App() {
 
   return (
     <div>
-      <nav style={{ padding: '1rem', borderBottom: '1px solid #ddd' }}>
-        <Link to="/" style={{ marginRight: '1rem' }}>Home</Link>
+      <nav className="nav">
+        <span className="brand">AI Capsule</span>
+        <Link to="/">Home</Link>
         {user ? (
           <>
-            <Link to="/dashboard" style={{ marginRight: '1rem' }}>Dashboard</Link>
-            <span style={{ marginRight: '1rem' }}>Signed in as {user.username}</span>
-            <button onClick={logout}>Log out</button>
+            <Link to="/dashboard">Dashboard</Link>
+            <span className="user">Signed in as {user.username}</span>
+            <button className="ghost" onClick={logout}>Log out</button>
           </>
         ) : (
           <Link to="/login">Login</Link>
